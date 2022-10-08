@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view hidden="{{clockShow}}">
+    <view class="slider">
+    <slider min="1" max="60" show-value activeColor="#E7624F" backgroundColor="#666666" value="{{time}}" bindchange="handleSliderChange"/>
+  </view>
+  <view class="task_text">
+    <view class="task_title">选择一个任务</view>
+    <view class="task_desc">接下来的{{time}}分钟内，你将专注做这件事</view>
+  </view>
+  <view class="task_cate">
+    <view wx:for="{{cateList}}" class="cate_item" data-index="{{index}}" bindtap="handleCateClick">
+      <view class="cate_icon"><image src="../../images/{{item.icon}}.png"></image></view>
+      <view class="cate_text {{cateActive === index ? 'cate_text_active' : ''}}">{{item.title}}</view>
+    </view>
+  </view>
+
+  <view class="start" bindtap="startClick">开始专注</view>
+</view>
+
+<!-- 计时 -->
+<!-- <view class="clock"  hidden="{{!clockShow}}" style="height: {{windowHeight}}px"> -->
+<view class="clock"  hidden="{{!clockShow}}" >
+<view class="progress">
+  <canvas id="progress_bg"  type="2d" class="progress_bg"></canvas>
+  <canvas id="progress_active" type="2d" class="progress_active"></canvas>
+  <view class="progress_text">20:00</view>
+  <!-- <view class="task_btn">暂停</view>
+  <view class="task_btn">继续</view>
+  <view class="task_btn">放弃</view> -->
+</view>
+</view>
