@@ -69,11 +69,10 @@
 .progress {
   width: 400rpx;
   height: 400rpx;
-  background: orange;
   margin: 140rpx auto;
   position: relative;
 }
-.progress .progress_bg .progress_active{
+.progress .progress_bg, .progress .progress_active{
   position: absolute;
   left: 0;
   top: 0;
@@ -91,13 +90,17 @@
   top: 170rpx;
   text-align: center;
 }
-.task_time .task_btn {
-  width:280rpx;
-  border: 2px solid #fff;
-  border-radius: 20rpx;
-  background-color: #E7624F;
-  margin: 30rpx auto;
+.btns {
+  width: 400rpx; 
+  margin: 0 auto;
+}
+.btns .btn{ 
+  width: 280rpx;
   height: 80rpx;
   line-height: 80rpx;
   text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx auto;
 }

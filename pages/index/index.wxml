@@ -23,9 +23,16 @@
 <view class="progress">
   <canvas id="progress_bg"  type="2d" class="progress_bg"></canvas>
   <canvas id="progress_active" type="2d" class="progress_active"></canvas>
-  <view class="progress_text">20:00</view>
-  <!-- <view class="task_btn">暂停</view>
-  <view class="task_btn">继续</view>
-  <view class="task_btn">放弃</view> -->
+  <view class="progress_text">{{timeStr}}</view>
+</view>
+<view class="btns">
+  <view wx:if="{{!pauseShow}}">
+    <view class="btn pauseBtn" bindtap="pause">暂停</view>
+    <view class="btn okBtn" bindtap="ok">提前结束</view>
+  </view>
+  <view class="continueCancleBtn" wx:if="{{pauseShow}}">
+    <view class="btn continueBtn" bindtap="continue">继续</view>
+    <view class="btn cancleBtn" bindtap="cancle">放弃</view>
+  </view>
 </view>
 </view>

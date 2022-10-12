@@ -1,8 +1,65 @@
-.log-list {
+.sum{
   display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height:350rpx;
+  border-bottom: 10rpx solid #eee;
 }
-.log-item {
-  margin: 10rpx;
+.sum .sum_item {
+  width: 375rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.sum .sum_item .sum_item_title {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #68757E;
+}
+.sum .sum_item .sum_item_val {
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #E7624E;
+}
+
+.detail {
+  margin: 0 auto;
+  width: 700rpx;
+}
+.detail .detail_title {
+  display:flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.detail_title .detail_title_text{
+  flex: 1;
+  font-size: 30rpx;
+}
+.detail_title .detail_title_type{
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+}
+.detail_title .detail_title_type text {
+  padding-left: 10rpx;
+}
+.active{
+  color: #E7624E;
+}
+.list_item {
+  display: flex;
+}
+.list_item > view {
+  width: 200rpx;
+  text-align: center;
+}
+.list_item .list_item_date {
+  width: 400rpx;
+  text-align: left;
+}
+.list_item .list_item_cate {
+  text-align: center;
+}
+.list_item .list_item_time {
+  text-align: right;
 }
